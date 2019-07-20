@@ -1,11 +1,11 @@
 {
-  "name": "hbs-cli",
-  "version": "0.0.0-development",
-  "description": "A CLI tool for rendering Handlebars templates",
-  "homepage": "http://github.com/keithamus/hbs-cli/issues",
-  "bugs": "http://github.com/keithamus/hbs-cli/issues",
+  "name": "hbs-cli-with-helpers",
+  "version": "0.0.1-dev",
+  "description": "A CLI tool for rendering Handlebars templates with a few popular helpers forked from https://github.com/keithamus/hbs-cli",
+  "homepage": "https://github.com/jhcao23/hbs-cli-with-helpers",
+  "bugs": "https://github.com/jhcao23/hbs-cli-with-helpers/issues",
   "license": "MIT",
-  "author": "Keith Cirkel (http://keithcirkel.co.uk)",
+  "author": "Keith Cirkel (http://keithcirkel.co.uk), John Cao (https://github.com/jhcao23)",
   "files": [
     "lib/*.js"
   ],
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/keithamus/hbs-cli.git"
+    "url": "git+ssh://git@github.com/jhcao23/hbs-cli-with-helpers.git"
   },
   "scripts": {
     "lint": "eslint src test --ignore-path .gitignore",
@@ -57,10 +57,12 @@
     "fs-promise": "^0.3.1",
     "glob-promise": "^1.0.4",
     "handlebars": "^4.0.5",
+    "handlebars-helpers": "^0.10.0",
     "lodash.merge": "^3.3.2",
     "minimist": "^1.2.0",
     "mkdirp-then": "^1.2.0",
-    "resolve": "^1.1.6"
+    "resolve": "^1.1.6",
+    "swag": "^0.7.0"
   },
   "devDependencies": {
     "babel": "^5.8.34",

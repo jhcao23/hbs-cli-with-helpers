@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import { resolve as resolvePath, basename, extname } from 'path';
 import Handlebars from 'handlebars';
+import Swag from 'swag';
+import helpers from 'handlebars-helpers';
 import minimist from 'minimist';
 import glob from 'glob-promise';
 import packageJson from '../package.json';
@@ -92,6 +94,8 @@ export async function renderHandlebarsTemplate(
   await Promise.all(files.map(async function renderTemplate(file) {
     debug(`Rendering template ${file} with data`, data);
     const path = resolvePath(outputDirectory, `${basename(file, extname(file))}.${outputExtension}`);
+    Swag.registerHelpers(Handlebars);
+    Handlebars.registerHelper(helpers());
     const htmlContents = Handlebars.compile(await readFile(file, 'utf8'))(data);
     if (stdout) {
       await process.stdout.write(htmlContents, 'utf8');
