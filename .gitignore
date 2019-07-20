@@ -6,6 +6,5 @@ yarn.lock
 *.log*
 *.pid
 *.seed
-lib/
 test/test*.html
 .idea/
