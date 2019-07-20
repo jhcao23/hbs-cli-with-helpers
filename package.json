@@ -19,8 +19,9 @@
   },
   "scripts": {
     "lint": "eslint src test --ignore-path .gitignore",
-    "prepublish": "babel src -d lib",
     "pretest": "yarn run lint",
+    "prepublish": "babel src -d lib",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "yarn run test:run:1 && yarn run test:verify:1 && yarn run test:run:2 && yarn run test:verify:2",
     "test:run:1": "node . -H handlebars-helper-br -D ./test/data.json -o test test/test-1.hbs",
     "test:verify:1": "diff test/test-1.html test/verify-1.html",
@@ -71,6 +72,7 @@
     "eslint-plugin-filenames": "^0.2.0",
     "ghooks": "^1.0.1",
     "handlebars-helper-br": "^0.1.0",
+    "semantic-release": "^15.13.18",
     "travis-after-all": "^1.4.4",
     "validate-commit-msg": "^2.8.2"
   }
