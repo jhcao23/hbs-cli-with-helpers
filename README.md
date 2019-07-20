@@ -1,8 +1,11 @@
-# hbs-cli
+# hbs-cli-with-helpers
 
 
 
 This is a tool to render [handlebars](http://handlebarsjs.com) templates, with the ability to require in Partials, Helpers and JSON Data.
+
+This repository was originally folked from (keithamus/hbs-cli)[https://github.com/keithamus/hbs-cli].
+Only a few popular third party handlebars helpers were added to this repository. 
 
 ```sh
 Usage:
